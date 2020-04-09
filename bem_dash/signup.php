@@ -17,7 +17,52 @@
         <h1 class="h3 mb-3 font-weight-normal">Welcome to the Admin Page</h1>
         <p>"Bersama Ciptakan Karsa dalam Semangat Reparasi Cita untuk Udayana dan Indonesia"</p>
       </div>
-
+        
+        <!-- PHP Error Message -->
+      <?php 
+        if (isset($_GET['error'])) {
+          if ($_GET['error'] == 'emptyfields') {
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Tidak boleh kosong!</strong> Silahkan isi form dengan lengkap dan benar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>';
+          }elseif ($_GET['error'] == 'invalidmail') {
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Email salah!</strong> Silahkan isi form dengan lengkap dan benar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>';
+          }elseif ($_GET['error'] == 'invalidmail') {
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Email salah!</strong> Silahkan isi form dengan lengkap dan benar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>';
+          }elseif ($_GET['error'] == 'invaliduid') {
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Username tidak sesuai!</strong> Silahkan isi form dengan lengkap dan benar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>';
+          }elseif ($_GET['error'] == 'passwordcheck') {
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Password tidak sesuai!</strong> Silahkan isi form dengan lengkap dan benar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>';
+          }
+        }
+      
+      
+      
+      ?>
+    
       <div class="form-label-group">
         <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
         <label for="inputUsername">Username</label>
